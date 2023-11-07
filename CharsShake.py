@@ -1,11 +1,9 @@
 import random
 import time
 
-
-#variables________________
-ask = input("Entrez les caractères à tester (différent):")
+ask = input("Entrez différents caractères à tester : \n")
 Liste = []
-List = list(ask)#["1","2","3","4","5","6","7"]
+List = list(ask) #["1","2","3","4","5","6","7"]
 Nbr = 0
 Multi = 1
 
@@ -22,6 +20,6 @@ while len(Liste) != Multi :
         Liste.append(List)
     else :
         continue
-print("La liste mesure donc ",len(Liste),"avec",Liste)
+print(f"La liste mesure donc {len(Liste)} avec {Liste}")
 
 
