@@ -1,7 +1,7 @@
 import pandas as pd
 from subprocess import Popen as pp
 
-f = open("C:/Users/****/Desktop/Keypass_Database/password.txt")
+f = open("C:/*****/****/****/****/********")
 content = f.read()
 
 df=pd.DataFrame([content])
