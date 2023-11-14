@@ -23,7 +23,6 @@ print('Recu :', datas)
 def zlib_d(zlib_datas_to_decode): #decompress zlib
   return zlib.decompress(zlib_datas_to_decode)
 datas_d = zlib_d(datas)
-send_datas(datas_d)
 
 def base64_d(base64_datas_to_decode): #decompress base64
   return base64.b64decode(base64_datas_to_decode)
