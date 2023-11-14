@@ -18,19 +18,21 @@ def send_datas(msg): # send datas to host + port
           print('Envoi ok.')
           datas = client.recv(1024)
   return datas
-datas = send_datas(msg = 'Hello, world')
-
-print('Reception...')
-print('These datas were receives :', datas)
 
 def zlib_d(zlib_datas_to_decode): #decompress zlib
   return zlib.decompress(zlib_datas_to_decode)
-datas_d = zlib_d(datas)
 
 def base64_d(base64_datas_to_decode): #decompress base64
   return base64.b64decode(base64_datas_to_decode)
-datas_d_clear = base64_d(datas_d)
-send_datas(datas_d_clear)
 
+# Main 
+datas = send_datas(msg = 'Hello, world')
+print('Reception...')
+print('These datas were receives :' + datas)
+datas_d = zlib_d(datas)
+datas_d_clear = base64_d(datas_d)
+datas = send_datas(datas_d_clear)
+print('Datas uncompress :' + datas)
 print('Deconnexion.')
+
 client.close()
