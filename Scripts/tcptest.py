@@ -3,8 +3,8 @@ import zlib
 import base64 
 
 # Flux TCP 
-HOST = '212.129.38.224'
-PORT = 52022
+HOST = 'X.X.X.X'
+PORT = 'XXXXX'
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 print('Connexion vers ' + HOST + ':' + str(PORT) + ' reussie.')
@@ -44,8 +44,8 @@ OR
 
 import socket; import base64; import zlib
 
-HOST = 'challenge01.root-me.org' # 212.129.38.224
-PORT = 52022
+HOST = 'X.X.X.X'
+PORT = XXXXX
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
