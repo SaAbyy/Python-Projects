@@ -5,7 +5,7 @@ from PIL import Image
 from bs4 import BeautifulSoup
 import re
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\MAEL\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\****\****\****\tesseract.exe'
 
 url = 'http://challenge01.root-me.org/programmation/ch8/'
 page = requests.get(url)
